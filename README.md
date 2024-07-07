@@ -35,6 +35,7 @@ Ensure you have the following installed on your local machine:
 
 
 # Video Demo
+![NEAT-Super-Mario](./readme/NEAT-Super-Mario-Demo.mp4)
 
 # How it works
 ### Why NEAT?
@@ -59,4 +60,5 @@ To evolve a suitable solution to the problem, the user must provide a *fitness_f
 In this case the best Mario is someone who reaches the higest level. Through a user specified amount of generations, wherein each generation of a Mario is produced by mutation of the most fit individuals of the previous generations.
 
 The reproduction and mutation operations may add nodes and/or connections to the NN. When the preset number of generations is reached, or when at least one individual's fitness value exceeds the user-specified threshold, the algorithm terminates.
+
 <!-- [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/) -->
