@@ -14,7 +14,7 @@ pygame.font.init()  # init font
 
 WIN_WIDTH = 500
 WIN_HEIGHT = 600
-FLOOR = 530
+FLOOR = 550
 STAT_FONT = pygame.font.SysFont("nunito", 50)
 END_FONT = pygame.font.SysFont("nunito", 50)
 DRAW_LINES = False
@@ -22,7 +22,7 @@ DRAW_LINES = False
 WIN = pygame.display.set_mode((WIN_WIDTH, WIN_HEIGHT))
 pygame.display.set_caption("Super Mario")
 
-pipe_img = pygame.transform.scale2x(pygame.image.load(os.path.join("imgs","pipe.png")).convert_alpha())
+pipe_img = pygame.transform.scale2x(pygame.image.load(os.path.join("imgs","pipes.png")).convert_alpha())
 bg_img = pygame.transform.scale(pygame.image.load(os.path.join("imgs","bg.png")).convert_alpha(), (600, 900))
 mario_images = [pygame.transform.scale2x(pygame.image.load(os.path.join("imgs","m" + str(x) + ".png"))) for x in range(1,4)]
 base_img = pygame.transform.scale2x(pygame.image.load(os.path.join("imgs","base.png")).convert_alpha())
@@ -129,7 +129,7 @@ class Pipe():
     """
     represents a pipe object
     """
-    # GAP = 200
+    GAP = 50
     VEL = 5
 
     def __init__(self, x):
@@ -158,10 +158,8 @@ class Pipe():
         set the height of the pipe, from the top of the screen
         :return: None
         """
-        self.height = random.randrange(50, 450)
-        # self.top = self.height - self.PIPE_TOP.get_height()
-        # self.bottom = self.height + self.GAP
-        self.bottom = self.height
+        self.height = random.randrange(150, 450)
+        self.bottom = self.height + self.GAP
 
     def move(self):
         """
@@ -176,10 +174,9 @@ class Pipe():
         :param win: pygame window/surface
         :return: None
         """
-        # draw top
-        # win.blit(self.PIPE_TOP, (self.x, self.top))
+        
         # draw bottom
-        win.blit(self.PIPE_BOTTOM, (self.x, self.bottom))
+        win.blit(self.PIPE_BOTTOM, (self.x, FLOOR - self.height))
 
 
     def collide(self, mario, win):
