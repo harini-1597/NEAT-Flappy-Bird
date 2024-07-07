@@ -67,6 +67,6 @@ In this case the best Mario is someone who reaches the higest level. Through a u
 
 The reproduction and mutation operations may add nodes and/or connections to the NN. When the preset number of generations is reached, or when at least one individual's fitness value exceeds the user-specified threshold, the algorithm terminates.
 
-Read more about NEAT here: [NEAT Official Docs](https://neat-python.readthedocs.io/en/latest/neat_overview.html)!
+Read more about NEAT here: [NEAT Official Docs](https://neat-python.readthedocs.io/en/latest/neat_overview.html)
 
 <!-- [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/) -->
