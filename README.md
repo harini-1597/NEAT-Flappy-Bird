@@ -35,7 +35,7 @@ Ensure you have the following installed on your local machine:
 
 
 # Video Demo
-![NEAT-Super-Mario](./readme/NEAT-Super-Mario-Demo.mp4)
+[![NEAT-Super-Mario-Video-Demo]](https://raw.githubusercontent.com/harini-1597/NEAT-Super-Mario/main/readme/NEAT-Super-Mario-Demo.mp4)
 
 # How it works
 ### Why NEAT?
